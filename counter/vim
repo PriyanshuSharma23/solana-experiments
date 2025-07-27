@@ -1,0 +1,925 @@
+    1  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    2  cd back
+    3  lg
+    4  clear
+    5  cd frontend
+    6  lg
+    7  gh pr review 69
+    8  clear
+    9  ;g
+   10  lg
+   11  make
+   12  lg
+   13  clear
+   14  g
+   15  lg
+   16  ls
+   17  vim
+   18  make
+   19  make run
+   20  make
+   21  cd backl
+   22  cd back
+   23  ls
+   24  make run]=
+   25  make run
+   26  lg
+   27  cd frontend
+   28  gh pr review 71 
+   29  gh pr review 72
+   30  clear
+   31  lg
+   32  clear
+   33  history
+   34  clear
+   35  brew install putty\n
+   36  clearn
+   37  clean
+   38  clear
+   39  cd Downloads/
+   40  ls
+   41  ls | grep ppk
+   42  puttygen priyanshu.ppk \\n  -O private-openssh \\n  -o priyanshu_id_rsa\n
+   43  mv priyanshu_id_rsa ~/.ssh/\n
+   44  chmod 600 ~/.ssh/priyanshu_id_rsa\n
+   45  ssh-add ~/.ssh/priyanshu_id_rsa\n
+   46  vim
+   47  cat >> ~/.ssh/config <<EOF\nHost ProdPSQLServer\n  HostName 192.168.216.36\n  User ubuntu\n  IdentityFile ~/.ssh/priyanshu_id_rsa\nEOF\nchmod 600 ~/.ssh/config\n\n
+   48  ssh ProdPSQLServer\n
+   49  ssh -i ~/.ssh/priyanshu_id_rsa ubuntu@192.168.216.36\n
+   50  ssh -vvv -i ~/.ssh/priyanshu_id_rsa ubuntu@192.168.216.36\n
+   51  clear
+   52  puttygen priyanshu.ppk \\n    -O private-openssh \\n    -o ~/.ssh/priyanshu_id_rsa\nchmod 600 ~/.ssh/priyanshu_id_rsa
+   53  head -n3 ~/.ssh/priyanshu_id_rsa\n
+   54  # generate the public key\nssh-keygen -y -f ~/.ssh/priyanshu_id_rsa > ~/.ssh/priyanshu_id_rsa.pub\n\n# copy it into the server (you’ll need password or console access)\nssh-copy-id -i ~/.ssh/priyanshu_id_rsa ubuntu@192.168.216.36\n
+   55  ssh -i ~/.ssh/priyanshu_id_rsa ubuntu@192.168.216.36\n
+   56  nvim 
+   57  ta
+   58  nvim 
+   59  cd nvim 
+   60  nvim .
+   61  ssh -i ~/.ssh/priyanshu_id_rsa priyanshu@192.168.216.36\n
+   62  ssh -i ~/.ssh/priyanshu_id_rsa root@192.168.216.36\n
+   63  ping 192.168.216.36
+   64  ping 192.168.216.35
+   65  ping 192.168.213.5
+   66  ssh -i ~/.ssh/priyanshu_id_rsa root@192.168.213.5\n
+   67  ssh -i ~/.ssh/priyanshu_id_rsa priyanshu@192.168.213.5\n
+   68  cd back
+   69  nvi m
+   70  nvim 
+   71  openssl rand -base64 12
+   72  psql "host=<EC2-Public-IP> port=5432 dbname=voya_knowledge_base user=voya_writer password=StrongP@ssw0rd
+   73  psql "host=192.168.213.5 port=5432 dbname=voya_knowledge_base user=voya_writer password=Z8XfDzuhE-oD5TVk"\n
+   74  brew intsall postgres
+   75  brew install postgres
+   76  clear
+   77  ssh priyanshu@172.21.150.7
+   78  scp
+   79  scp priyanshu@172.21.150.7:/tmp/other_db.sql ~/Downloads/
+   80  rsync
+   81  scp ~/Downloads/other_db.sql priyanshu@192.168.213.5:/tmp/dev_data.sql
+   82  ls
+   83  clera
+   84  lg
+   85  ssh priyanshu@192.168.213.5
+   86  vim ~/Downloads/other_db.sql
+   87  lg
+   88  git reset --soft HEAD^
+   89  lg
+   90  vim 
+   91  nvim 
+   92  lg
+   93  nvim 
+   94  lg
+   95  gh pr create -B dev
+   96  gh pr edit 89 --add-approver aman-jain_tbo
+   97  gh pr edit 89 --add-reviwer aman-jain_tbo
+   98  gh pr edit 89 --add-reviewer aman-jain_tbo
+   99  git checkout dev
+  100  lg
+  101  gh pr create -B main
+  102  gh pr edit 90 --add-reviewer aman-jain_tbo
+  103  lg
+  104  gh pr create -B release
+  105  gh pr edit 91 --add-reviewer aman-jain_tbo
+  106  g
+  107  lg
+  108  git reset --hard origin/release-main-merge
+  109  git reset --hard origin/main
+  110  git reset --hard origin/release
+  111  lg
+  112  nvim 
+  113  lg
+  114  gh pr create -B release --add-reviewer aman-jain_tbo
+  115  gh pr create -B release --add-reviewer 
+  116  gh pr create -B release
+  117  gh pr edit 92 --add-reviewer aman-jain_tbo
+  118  clear
+  119  lg
+  120  nvim 
+  121  lg
+  122  gh pr create -B dev
+  123  gh pr edit 93 --add-reviwer aman-jain_tbo
+  124  gh pr edit 93 --add-reviewer aman-jain_tbo
+  125  gh pr edit 93 --add-reviwer aman-jain_tbo
+  126  lg
+  127  gh create -B main
+  128  gh pr create -B main
+  129  gh pr edit 94 --add-reviewer aman-jain_tbo
+  130  lg
+  131  git checkout release-main-merge
+  132  git pull 
+  133  lg
+  134  git reset --hard origin/release
+  135  lg
+  136  gh pr create -B release
+  137  lg
+  138  gh pr create -B release
+  139  gh pr edit 95 --add-reviewer aman-jain_tbo
+  140  lg
+  141  nvim 
+  142  git push origin release-main-merge -f
+  143  clear
+  144  nvim 
+  145  lg
+  146  cd backend
+  147  ls
+  148  lg
+  149  make build
+  150  lg
+  151  git checkout dev
+  152  git pull
+  153  clear
+  154  nvim 
+  155  lg
+  156  git pul
+  157  git pull
+  158  lg
+  159  nvim 
+  160  cd nvim 
+  161  nvim .
+  162  nvim 
+  163  nvim
+  164  nvim 
+  165  cd backend
+  166  neovide
+  167  /Applications/Neovide.app/Contents/MacOS/neovide 
+  168  nvim ~/.zshrc
+  169  gf
+  170  nvim ~/.zshrc
+  171  source ~/.zshrc
+  172  nvim ~/.zshrc
+  173  source ~/.zshrc
+  174  nv
+  175  nv .
+  176  clear
+  177  lg
+  178  cd nvim
+  179  nvim 
+  180  cd back
+  181  nv .
+  182  clear
+  183  nvim 
+  184  LOCAL=1 go run ./cmd/delete-all-trips
+  185  clear
+  186  LOCAL=1 go run ./cmd/delete-all-trips
+  187  cd fron
+  188  ls
+  189  nvim 
+  190  cd back
+  191  lg
+  192  clear
+  193  nvim 
+  194  lg
+  195  clear
+  196  lg
+  197  nvim 
+  198  cd back
+  199  ls
+  200  lg
+  201  cd frontend
+  202  nvi 
+  203  nvim 
+  204  lg
+  205  nvim 
+  206  vim
+  207  rm x
+  208  make 
+  209  make build
+  210  make run
+  211  lg
+  212  make
+  213  make 
+  214  make build
+  215  make 
+  216  make run
+  217  lg
+  218  man git 
+  219  clear
+  220  git branch -m feature/add-public-private-itinerary-toggle 
+  221  git branch -m feature/add-public-private-itinerary-toggle  feature/add-public-private-itinerary-feature
+  222  cd back
+  223  lg
+  224  nvim
+  225  git checkout feature/optimize-new-itinerary-creation
+  226  nvim 
+  227  make run
+  228  cd frontend
+  229  npm run de
+  230  npm run dev
+  231  cler
+  232  clear
+  233  npm run dev
+  234  make
+  235  make run
+  236  lg
+  237  git merge --abort
+  238  lg
+  239  git rebase --abort
+  240  lg
+  241  clear
+  242  lg
+  243  make run
+  244  make 
+  245  make
+  246  make run
+  247  lg
+  248  clear
+  249  ls
+  250  nvim
+  251  lg
+  252  gh pr create -B dev
+  253  gh pr edit 96 --add-reviewer pranay-payal_tbo
+  254  lg
+  255  gh pr create -B main
+  256  gh pr edit 97 --add-reviewer pranay-payal_tbo
+  257  gh pr edit 97 --remove-reviewer pranay-payal_tbo
+  258  clear
+  259  lg
+  260  gh pr create -B release
+  261  gh pr edit 98 --add-reviewer aman-jain_tbo
+  262  cd frontend
+  263  ze d.
+  264  zed .
+  265  lg
+  266  make 
+  267  make run
+  268  cd f
+  269  git checkout dev
+  270  git pull
+  271  make run 
+  272  npm run dev
+  273  npminstall
+  274  npm install
+  275  npm run dev
+  276  lg
+  277  cd Downloads
+  278  ls
+  279  osascript -e 'tell application "Finder" to set desktop picture to POSIX file "HTfBPUL - Imgur.jpg"'
+  280  sudo osascript -e 'tell application "Finder" to set desktop picture to POSIX file "HTfBPUL - Imgur.jpg"'
+  281  pwd
+  282  osascript -e 'tell application "System Events" to set picture of every desktop to "/Users/priyanshu.sharma/Downloads/HTfBPUL - Imgur.jpg"'\n
+  283  ls
+  284  osascript -e 'tell application "System Events" to set picture of every desktop to "/Users/priyanshu.sharma/Downloads/windows-chan.3840x2160.mp4"'\n
+  285  clear
+  286  make 
+  287  make
+  288  make run
+  289  make run 
+  290  make run
+  291  lg
+  292  make un 
+  293  make run
+  294  make run 
+  295  make run
+  296  cd backend
+  297  nvim 
+  298  clear
+  299  lg
+  300  clear
+  301  lg
+  302  clear
+  303  make
+  304  make 
+  305  make vey
+  306  make vet
+  307  go vet ./...
+  308  lg
+  309  clear
+  310  make 
+  311  make run
+  312  make run 
+  313  go run ./cmd/main.go
+  314  go run ./cmd/solve.go
+  315  lg
+  316  clear
+  317  make 
+  318  make run
+  319  make run 
+  320  make run
+  321  lg
+  322  osascript -e 'tell application "System Events" to set picture of every desktop to "/Users/priyanshu.sharma/Downloads/windows-chan.3840x2160.mp4"'\n
+  323  mke
+  324  make
+  325  lg
+  326  make
+  327  lg
+  328  clear
+  329  ta
+  330  cd back
+  331  nvim 
+  332  brew install emacs
+  333  make 
+  334  make run
+  335  emacs
+  336  lg
+  337  Zlg
+  338  lg
+  339  clear
+  340  git checkout feature/add-public-private-itinerary-feature
+  341  lg
+  342  make 
+  343  make run
+  344  lg
+  345  clear
+  346  lg
+  347  npm run dev
+  348  clear
+  349  make run
+  350  make run 
+  351  pnpm add @radix-ui/react-dropdown-menu
+  352  npm add @radix-ui/react-dropdown-menu
+  353  npm run dev
+  354  yazi
+  355  clear
+  356  lg
+  357  git checkout dev
+  358  lg
+  359  npm run dev
+  360  make run
+  361  npm install @radix-ui/react-popover
+  362  l
+  363  lg
+  364  git checkout templates
+  365  git pull
+  366  npm run dev
+  367  npm install
+  368  npm run dev
+  369  make run 
+  370  lg
+  371  clear
+  372  make run
+  373  npm run build
+  374  npm run dev
+  375  t
+  376  clear
+  377  ta
+  378  cd /etc/
+  379  ls
+  380  cd pam.d
+  381  nvim 
+  382  sudo nvim 
+  383  sudo ls
+  384  t
+  385  npm run dev
+  386  cd b
+  387  make run
+  388  ta
+  389  clear
+  390  ta
+  391  make run 
+  392  make 
+  393  make
+  394  ta
+  395  mae run
+  396  make run
+  397  npm run dev
+  398  npm run build
+  399  npm run dev
+  400  ta
+  401  make run 
+  402  make run
+  403  make run 
+  404  make run
+  405  lg
+  406  make
+  407  lg
+  408  make
+  409  make run
+  410  lg
+  411  make
+  412  npm run lin
+  413  npm run lint
+  414  npm run build
+  415  npm run dev
+  416  lg
+  417  npm run dev
+  418  go run ./cmd/flights
+  419  ta
+  420  make 
+  421  make run
+  422  npm run dev
+  423  lg
+  424  clear
+  425  cd b
+  426  lg
+  427  cd f
+  428  lg
+  429  gh pr create -B dev 
+  430  gh pr edit 84 --add-reviewer aman-jain_tbo
+  431  cd b
+  432  gh pr create -B dev
+  433  gh pr edit 104 --add-reviewer aman-jain_tbo
+  434  cd f
+  435  lg
+  436  gh pr create -B dev
+  437  gh pr edit 86 --add-reviewer aman-jain_tbo
+  438  ipconfig
+  439  ifconfig
+  440  clear
+  441  ssh anirudh.kumar@192.168.10.194
+  442  ssh anirudh.kumar@172.20.10.12
+  443  ls
+  444  ifconfig
+  445  ping 192.168.10.194
+  446  clear
+  447  ls
+  448  clear
+  449  cd Documents
+  450  ls
+  451  mkdir ecommerce
+  452  cd ecommerce
+  453  ls
+  454  nvim 
+  455  ls
+  456  zed .
+  457  clear
+  458  npm i typescript --save-dev
+  459  npx tsc --init
+  460  npx tsc
+  461  node ./build/index.js
+  462  npx tsc -w
+  463  npm i gts --save-dev
+  464  npx gts init
+  465  npm run build
+  466  npm run compile
+  467  nvim
+  468  LOCAL=1 go run ./cmd/make-trips-public
+  469  ta
+  470  lg
+  471  git checkout fix_auto_complete
+  472  git pull
+  473  npm run deb
+  474  npm run dev
+  475  lg
+  476  git checkout dev
+  477  git pull
+  478  make run
+  479  ls
+  480  g
+  481  lg
+  482  gh pr create -B dev
+  483  ls
+  484  lg
+  485  gh pr create -B dev
+  486  gh pr edit 93 --add-reviewer shreyas-kabra_tbo
+  487  LOCAL=1 go run ./cmd/make-trips-public
+  488  lg
+  489  cd voya-ba
+  490  git checkout release-main-merge
+  491  git pull
+  492  git log
+  493  gh pr create -B release
+  494  gh pr edit 112 --add-reviewer shreyas-kabra_tbo
+  495  git log
+  496  lg
+  497  make run 
+  498  ta
+  499  clear
+  500  make run
+  501  clear
+  502  lg
+  503  ta
+  504  npm run dev
+  505  lg
+  506  LOCAL=1 go run ./cmd/make-trips-public
+  507  lg
+  508  ta
+  509  make run
+  510  lg
+  511  cd f
+  512  lg
+  513  git diff
+  514  git status
+  515  lg
+  516  clear
+  517  gh pr create -B dev
+  518  gh pr edit 97 --add-reviewer aman-jain_tbo
+  519  lg
+  520  cd f
+  521  cd back
+  522  clear
+  523  lg
+  524  gh pr create -B main 
+  525  gh pr edit 98 --add-reviewer aman-jain_tbo
+  526  lg
+  527  gh pr create -B release 
+  528  gh pr edit 99 --add-reviewer aman-jain_tbo
+  529  clear
+  530  lg
+  531  git checkout feat/redirect-after-login
+  532  lg
+  533  git pull
+  534  git checkout feat/redirect-after-login
+  535  ls
+  536  ta
+  537  make run
+  538  lg
+  539  git pull
+  540  git checkout feat_landingPage
+  541  feat/redirect-after-logi
+  542  git checkout feat/redirect-after-logi
+  543  git checkout feat/redirect-after-login
+  544  lg
+  545  npm run dev
+  546  make 
+  547  make run 
+  548  lg
+  549  gh pr create -B dev
+  550  gh pr edit 100 --add-reviewer aman-jain_tbo
+  551  lg
+  552  gh pr create -B main
+  553  gh pr edit 101 --add-reviewer aman-jain_tbo
+  554  lg
+  555  clear
+  556  lg
+  557  l
+  558  lg
+  559  gh pr create -B dev
+  560  gh pr edit 102 --add-reviewer aman-jain_tbo
+  561  lg
+  562  cd fron
+  563  lg
+  564  gh pr create -B main
+  565  gh pr edit 103 --add-reviewer aman-jain_tbo
+  566  lg
+  567  gh pr create -B release
+  568  gh pr edit 104 --add-reviewer aman-jain_tbo
+  569  cd back
+  570  lg
+  571  gh pr create -B main
+  572  lg
+  573  gh pr create -B release 
+  574  gh pr edit 115 --add-reviewer aman-jain_tbo
+  575  npm run dev
+  576  lg
+  577  npm dev
+  578  make run
+  579  npm run dev
+  580  git checkout dev
+  581  npm run dev
+  582  cd back
+  583  make run
+  584  lg
+  585  gh pr create -B dev
+  586  lg
+  587  gh pr create -B dev
+  588  lg
+  589  gh pr create -B dev
+  590  gh pr edit 108 --add-reviewer pranay-payal_tbo
+  591  lg
+  592  gh pr create 
+  593  gh pr edit 109 --add-reviewer pranay-payal_tbo
+  594  lg
+  595  gh pr create -B release
+  596  gh pr edit 110 --add-reviewer pranay-payal_tbo
+  597  nvim
+  598  djlskjfdksfj ds
+  599  ls
+  600  nvim 
+  601  lg
+  602  LOCAL=1 go run ./cmd/make-trips-public
+  603  clear
+  604  LOCAL=1 go run ./cmd/make-trips-public
+  605  ta
+  606  make run
+  607  ta
+  608  make run 
+  609  lg
+  610  git checkout dev
+  611  npm run dev
+  612  make run 
+  613  cler
+  614  lg
+  615  make run
+  616  cd back
+  617  lg
+  618  git branch -m fix_start_end_location_streaming_template
+  619  lg
+  620  gh pr create -B dev
+  621  gh pr edit 116 --add-reviewer pranay-payal_tbo
+  622  lg
+  623  gh pr create -B main 
+  624  gh pr edit 117 --add-reviewer pranay-payal_tbo
+  625  lg
+  626  gh pr create -B release 
+  627  gh pr edit 118 --add-reviewer pranay-payal_tbo
+  628  clear
+  629  lg
+  630  go run .
+  631  go build remove-sub-folders-from-the-filesystem.go
+  632  ./remove-sub-folders-from-the-filesystem
+  633  go build remove-sub-folders-from-the-filesystem.go
+  634  ./remove-sub-folders-from-the-filesystem
+  635  clear
+  636  go build remove-sub-folders-from-the-filesystem.go
+  637  ./remove-sub-folders-from-the-filesystem
+  638  go build remove-sub-folders-from-the-filesystem.go
+  639  ./remove-sub-folders-from-the-filesystem
+  640  go doc heap
+  641  go doc sort.Interface
+  642  node
+  643  nvim
+  644  cd ~/.config
+  645  nvim nvim
+  646  nvim 
+  647  clear
+  648  ls
+  649  mv nvim nvim.bak
+  650  mv nvim.lazy nvmi
+  651  mv nvmi nvim
+  652  nvim
+  653  nvim 
+  654  nvim
+  655  node
+  656  nvim 
+  657  clear
+  658  nvim 
+  659  cd nvim
+  660  nvim .
+  661  nvim 
+  662  clear
+  663  cd backend
+  664  clear
+  665  lg
+  666  nvim
+  667  nvim 
+  668  clear
+  669  nvim
+  670  cd backend
+  671  clear
+  672  nvim 
+  673  cd fron
+  674  ls
+  675  nvim 
+  676  ta
+  677  npm run dev
+  678  ta
+  679  clear
+  680  make run
+  681  clear
+  682  lear
+  683  lg
+  684  clear
+  685  ta
+  686  make
+  687  make run
+  688  ta
+  689  npm run dev
+  690  make
+  691  make run
+  692  ta
+  693  clear
+  694  ls
+  695  g
+  696  lg
+  697  clear
+  698  ta
+  699  make run
+  700  clear
+  701  make run
+  702  clear
+  703  make run
+  704  clear
+  705  solana account create
+  706  npx create-solana-dapp
+  707  npx create-solana-dapp .
+  708  npx create-solana-dapp 
+  709  cd ./tokens
+  710  npm run dev
+  711  clear
+  712  npm run dev
+  713  clear
+  714  brew search rustup
+  715  brew install rustup
+  716  rustup
+  717  rustup toolchain
+  718  rustup toolchain install
+  719  rust
+  720  rustc
+  721  cd ../anchor
+  722  clear
+  723  cargo init 
+  724  clear
+  725  ta
+  726  make run
+  727  ta
+  728  make run
+  729  make run 
+  730  which devle
+  731  which delve
+  732  dvelve
+  733  clear
+  734  ta
+  735  make run
+  736  make build
+  737  clear
+  738  ls
+  739  lg
+  740  clear
+  741  ls
+  742  cd f
+  743  ls
+  744  lg
+  745  make 
+  746  make run
+  747  clear
+  748  cd backend
+  749  clea
+  750  clear
+  751  make run
+  752  clear
+  753  cd 
+  754  cd b
+  755  make run
+  756  make 
+  757  make run
+  758  lg
+  759  cd anchor
+  760  cargo build
+  761  cd ..
+  762  cd helloworld
+  763  cargo init
+  764  cursor .
+  765  rm -rf *
+  766  cd ..
+  767  rm -rf helloworld
+  768  cargo new --lib helloworld
+  769  cargo build-sbf
+  770  solana
+  771  curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
+  772  cargo build-sbf
+  773  lg
+  774  clear
+  775  ta
+  776  make run
+  777  lg
+  778  git reset --soft HEAD~
+  779  lg
+  780  ta
+  781  make
+  782  lg
+  783  yazi
+  784  brew install --cask krishkrosh/apps/trackweight
+  785  trackweight
+  786  brew uninstall --cask krishkrosh/apps/trackweight
+  787  brew install --cask krishkrosh/apps/trackweight
+  788  lg
+  789  clear
+  790  ta
+  791  make run
+  792  lg
+  793  ta
+  794  avm
+  795  solana logs
+  796  solana
+  797  solana logs
+  798  solana logs solana config get\n
+  799  solana config get\n
+  800  solana config set --url https://api.devnet.solana.com\n
+  801  solana config get\n
+  802  rg
+  803  solana logs | rg "EC82sUoMB92F1yCkT2k1EzEP2pKCmPjdXy1dNVhyehJ2 invoke" -A 6
+  804  solana balance
+  805  solana-keygen new
+  806  vim test_keypair.tsx
+  807  mv test_keypair.tsx test_keypair.txt
+  808  solana balance
+  809  solana airdrop 1
+  810  solana balance
+  811  cd Doc
+  812  ls
+  813  mkdir blockchain
+  814  cd blockchain
+  815  cursor .
+  816  mkdir helloworld
+  817  cd helloworld
+  818  touch test.ts
+  819  deno init --unstable --import-map=import_map.json && deno add @coral-xyz/anchor buffer
+  820  brew install deno\n
+  821  deno init --unstable --import-map=import_map.json && deno add @coral-xyz/anchor buffer
+  822  deno init
+  823  deno run test.ts
+  824  ckear
+  825  clear
+  826  cd helloworld && npm install
+  827  solana logs | rg "EC82sUoMB92F1yCkT2k1EzEP2pKCmPjdXy1dNVhyehJ2 invoke" -A 6
+  828  npm test
+  829  npm install @solana/wallet-adapter-wallets @solana/web3.js
+  830  npm test
+  831  solana-test-validator
+  832  clear
+  833  make run
+  834  lg
+  835  ta
+  836  make run
+  837  npm run lint
+  838  make run
+  839  lg
+  840  clear
+  841  lg
+  842  cd fron
+  843  lg
+  844  ta
+  845  make run
+  846  make run 
+  847  clear
+  848  lg
+  849  cd backend
+  850  lg
+  851  ta
+  852  yazi
+  853  python
+  854  python3
+  855  python3 -m http.server
+  856  sudo reboot
+  857  cd blockchain
+  858  clear
+  859  ls
+  860  clear
+  861  ls
+  862  cargo new --lib testsolanaprogram
+  863  ls
+  864  cd test
+  865  cd bloc
+  866  cd testsolanaprogram
+  867  ls
+  868  nvim 
+  869  cargo add solana_program
+  870  cargo add solana-program
+  871  cargo build
+  872  cargo build-sbf
+  873  cargo build-spf
+  874  cargo build-sbf
+  875  nvim Cargo.
+  876  nvim Cargo.toml
+  877  cargo build-sbf
+  878  solana
+  879  clear
+  880  nvim 
+  881  cursor. 
+  882  cursor .
+  883  cargo build-sbf
+  884  solana program
+  885  solana program deploy target/sbpf-solana-solana/release/testsolanaprogram.so 
+  886  solana account 4vpSg1TzFrETdcCcjuUoisNUnXPP5LfABUGZotxVSHNC --output json\n
+  887  npm init -y
+  888  npm install --save @solana/web3.js borsh\n
+  889  npm install @dao-xyz/borsh
+  890  npm install typescript --save-dev
+  891  bun
+  892  deno
+  893  deno run ./tests/client.ts
+  894  npm install typescript --savedev
+  895  npm install typescript --save-dev
+  896  tsc .
+  897  npx tsc .
+  898  cd /Users/priyanshu.sharma/Documents/blockchain/testsolanaprogram && npm install
+  899  npm run build
+  900  npm test
+  901  npm install vitest
+  902  npm install vitest --save-dev
+  903  npm test
+  904  solana logs
+  905  solana logs | rg 
+  906  solana logs | rg "invoke:"
+  907  solana logs | rg "invoked:"
+  908  npm test
+  909* npm run build
+  910  solana balance
+  911* OA
+  912* npm test
+  913* cd /Users/priyanshu.sharma/Documents/blockchain/testsolanaprogram && mv tests/client.ts tests/client.test.ts
+  914* npm test
+  915* solana accoutn yUNYR3vBStKpVv1ChkjtbEaxYn9RXWMytbdRAhGrohh --output json
+  916* solana account yUNYR3vBStKpVv1ChkjtbEaxYn9RXWMytbdRAhGrohh --output json
+  917* clear
+  918* npm test
+  919* solana account FCPRijQitsQBCdRxAmwJbRpT5CPYZD7gBrAjubX5GG9h --output json
+  920* npm test
+  921* solana account FwbT4afdnybLeqWtZKJXQbnWpemPWrMFFozQL2SmzGjm
+  922* npm test
+  923* solana account CA1XivzcUYX3EU1LnsQrAnEuP8pSgU5y41j2vcKm8rqF
+  924  history
+  925  history | vim

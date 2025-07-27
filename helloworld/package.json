@@ -1,0 +1,25 @@
+{
+  "name": "solana-helloworld",
+  "version": "1.0.0",
+  "description": "Solana Hello World program testing",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test --loader ts-node/esm test.ts",
+    "test:watch": "node --test --loader ts-node/esm --watch test.ts",
+    "dev": "ts-node test.ts"
+  },
+  "keywords": ["solana", "blockchain", "testing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/web3.js": "^1.87.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "type": "module"
+}
