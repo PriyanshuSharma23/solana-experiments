@@ -1,6 +1,11 @@
 import { Schema } from "borsh";
 
-export const programID = "31mVoUYYrm4ar753GSd1TxEuNpYNn88emuyGnzqEZFpc";
+export const programID = "2wRXQptrQ5JnEWWpeBcymaKGWXMgvUbUmgoL2wSyXKSi";
+
+enum InstructionType {
+  Initialize,
+  Increment,
+}
 
 export class PageVisits {
   visits: number;
@@ -12,6 +17,10 @@ export class PageVisits {
   }
 }
 
+export class IncrementPageVisits {
+  constructor(_: Partial<IncrementPageVisits> = {}) {}
+}
+
 export const PageVisitsSchema: Schema = {
   struct: {
     visits: "u32",
@@ -19,10 +28,21 @@ export const PageVisitsSchema: Schema = {
   },
 };
 
-export class IncrementPageVisits {
-  constructor(_: Partial<IncrementPageVisits> = {}) {}
-}
-
 export const IncrementPageVisitsScema: Schema = {
   struct: {},
+};
+
+export const InstructionSchema: Schema = {
+  enum: [
+    {
+      struct: {
+        Initialize: PageVisitsSchema,
+      },
+    },
+    {
+      struct: {
+        Increment: IncrementPageVisitsScema,
+      },
+    },
+  ],
 };

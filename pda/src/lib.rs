@@ -1,10 +1,11 @@
 use borsh::{BorshDeserialize, BorshSerialize};
+use solana_program::entrypoint;
+
 use solana_program::{
     account_info::{AccountInfo, next_account_info},
-    entrypoint,
     entrypoint::ProgramResult,
     program::invoke_signed,
-    program_error::ProgramError,
+    program_error::{self, ProgramError},
     pubkey::Pubkey,
     rent::Rent,
     sysvar::Sysvar,
@@ -13,22 +14,26 @@ use solana_system_interface::instruction;
 
 entrypoint!(process_instructions);
 
+#[derive(BorshSerialize, BorshDeserialize, Debug)]
+enum Instruction {
+    Initialize(PageVisits),
+    Increment(IncrementPageVisits),
+}
+
 fn process_instructions(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8],
 ) -> ProgramResult {
-    match PageVisits::try_from_slice(instruction_data) {
-        Ok(page_visits) => return create_page_visits(program_id, accounts, page_visits),
-        Err(_) => {}
-    }
+    let instruction = Instruction::try_from_slice(instruction_data)
+        .map_err(|_| program_error::INVALID_INSTRUCTION_DATA)?;
 
-    match IncrementPageVisits::try_from_slice(instruction_data) {
-        Ok(_) => return increment_page_visits(accounts),
-        Err(_) => {}
+    match instruction {
+        Instruction::Initialize(page_visits) => {
+            return create_page_visits(program_id, accounts, page_visits);
+        }
+        Instruction::Increment(_) => return increment_page_visits(accounts),
     }
-
-    Err(ProgramError::InvalidAccountData)
 }
 
 fn create_page_visits(

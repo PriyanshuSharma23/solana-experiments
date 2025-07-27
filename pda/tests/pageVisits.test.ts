@@ -1,10 +1,10 @@
 import { deserialize, serialize } from "borsh";
 import {
   IncrementPageVisits,
-  IncrementPageVisitsScema,
   PageVisits,
-  PageVisitsSchema,
   programID,
+  InstructionSchema,
+  PageVisitsSchema,
 } from "./pageVisits";
 import {
   Connection,
@@ -43,7 +43,9 @@ describe("Test serialization", function () {
 
   it("Size of serialized increment page", () => {
     const incrementPage = new IncrementPageVisits();
-    let size = serialize(IncrementPageVisitsScema, incrementPage).length;
+    let size = serialize(InstructionSchema, {
+      Increment: incrementPage,
+    }).length;
     console.log("Size after serialization:", size);
     expect(size).toBe(0);
   });
@@ -58,36 +60,35 @@ describe("Test serialization", function () {
     expect(wallet).not.toBe(null);
   });
 
-  //   it("Should create a pda and bump for a user", async function () {
-  //     let [pda, bump] = deriveProgramPDA(payer.publicKey);
+  it("Should create a pda and bump for a user", async function () {
+    let [pda, bump] = deriveProgramPDA(payer.publicKey);
 
-  //     let ix = new TransactionInstruction({
-  //       programId: programAddress,
-  //       keys: [
-  //         { pubkey: pda, isSigner: false, isWritable: true },
-  //         { pubkey: payer.publicKey, isSigner: false, isWritable: false },
-  //         { pubkey: payer.publicKey, isSigner: true, isWritable: true },
-  //         {
-  //           pubkey: SystemProgram.programId,
-  //           isSigner: false,
-  //           isWritable: false,
-  //         },
-  //       ],
-  //       data: Buffer.from(
-  //         serialize(
-  //           PageVisitsSchema,
-  //           new PageVisits({
-  //             visits: 0,
-  //             bump: bump,
-  //           })
-  //         ).buffer
-  //       ),
-  //     });
+    let ix = new TransactionInstruction({
+      programId: programAddress,
+      keys: [
+        { pubkey: pda, isSigner: false, isWritable: true },
+        { pubkey: payer.publicKey, isSigner: false, isWritable: false },
+        { pubkey: payer.publicKey, isSigner: true, isWritable: true },
+        {
+          pubkey: SystemProgram.programId,
+          isSigner: false,
+          isWritable: false,
+        },
+      ],
+      data: Buffer.from(
+        serialize(InstructionSchema, {
+          Initialize: new PageVisits({
+            visits: 0,
+            bump: bump,
+          }),
+        }).buffer
+      ),
+    });
 
-  //     const tx = new Transaction().add(ix);
+    const tx = new Transaction().add(ix);
 
-  //     await sendAndConfirmTransaction(connection, tx, [payer]);
-  //   }, 100000);
+    await sendAndConfirmTransaction(connection, tx, [payer]);
+  }, 100000);
 
   it("Visit the page!", async () => {
     const [pda] = deriveProgramPDA(payer.publicKey);
@@ -103,7 +104,34 @@ describe("Test serialization", function () {
         { pubkey: payer.publicKey, isSigner: true, isWritable: true },
       ],
       data: Buffer.from(
-        serialize(IncrementPageVisitsScema, new IncrementPageVisits({})).buffer
+        serialize(InstructionSchema, {
+          Increment: new IncrementPageVisits({}),
+        }).buffer
+      ),
+    });
+
+    await sendAndConfirmTransaction(connection, new Transaction().add(ix), [
+      payer,
+    ]);
+  }, 100000);
+
+  it("Visit the page!", async () => {
+    const [pda] = deriveProgramPDA(payer.publicKey);
+
+    const ix = new TransactionInstruction({
+      programId: programAddress,
+      keys: [
+        {
+          pubkey: pda,
+          isSigner: false,
+          isWritable: true,
+        },
+        { pubkey: payer.publicKey, isSigner: true, isWritable: true },
+      ],
+      data: Buffer.from(
+        serialize(InstructionSchema, {
+          Increment: new IncrementPageVisits({}),
+        }).buffer
       ),
     });
 
