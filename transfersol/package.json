@@ -1,0 +1,28 @@
+{
+  "author": "",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.2",
+    "borsh": "^2.0.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "transfersol",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "type": "commonjs",
+  "version": "1.0.0"
+}
